@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package proto ;
+option go_package = "github.com/360Ritik/user-service/proto";
+
+service UserService {
+  rpc GetUserById(UserByIdRequest) returns (UserResponse);
+  rpc GetUsersByIds(UsersByIdsRequest) returns (UsersResponse);
+  rpc SearchUsers(SearchRequest) returns (UsersResponse);
+  rpc AddNewUser(User) returns (User);
+}
+
+message UserByIdRequest {
+  int32 user_id = 1;
+}
+
+message UsersByIdsRequest {
+  repeated int32 user_ids = 1;
+}
+
+message SearchRequest {
+  string criteria = 1;
+  string value = 2;
+}
+
+message UserResponse {
+  User user = 1;
+}
+
+message UsersResponse {
+  repeated User users = 1;
+}
+
+message User {
+  int32 id = 1;
+  string fname = 2 ;
+  string city = 3;
+  int64 phone = 4;
+  float height = 5;
+  bool married = 6;
+}
