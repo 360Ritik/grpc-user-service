@@ -2,7 +2,8 @@
 
 This repository contains a gRPC-based user service implementation using Go.
 
-[Watch API Demonstration Video](https://example.com/api-demo-video)
+[Watch API Demonstration Video] [grpc-user-service.webm](https://github.com/360Ritik/grpc-user-service/assets/93071300/67c79e05-7172-4ea7-aa14-a38e363b3f99)
+
 ## Table of Contents
 
 - [Overview](#overview)
